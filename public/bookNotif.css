@@ -1,0 +1,114 @@
+body {
+	background-color: #fff;
+	font-family: arial, sans-serif;
+	letter-spacing: 1px;
+	padding: 0.5cm 1cm;
+}
+/*
+li:nth-of-type(1n+5) {
+	display: none;
+}
+*/
+
+li {
+  width: 210px;
+  height: 440px;
+	float: left;
+	margin: 20px 5px 20px 5px;
+	padding: 15px;
+	background-color: #fff;
+}
+
+ol {
+	list-style: none;
+}
+
+h1 {
+	display: none;
+	float: left;
+}
+
+.dont-break-out {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+}
+
+.cover {
+	margin: auto 0 10px 0;
+  max-width: 100%;
+	max-height: none;
+	border: 0;
+}
+
+.cover.before {
+	clear:both;
+}
+
+.element {
+	margin: 2px 0 22px 0;
+	text-align: center;
+}
+
+.metadata {
+	text-align: center;
+  width: 220px;
+  /*
+  float: right;
+
+  min-width: 70px;
+  max-width: 280px;
+  */
+}
+
+.hide {
+	min-height: 10px;
+	max-height: 38px;
+	overflow: scroll;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 5px 0 2px 0;
+	color: #009ACD;
+}
+
+.hideUri {
+	min-height: 10px;
+	max-height: 35px;
+	overflow: scroll;
+}
+
+/*
+.title {
+	line-height: 1.5em;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin: 5px 0 2px 0;
+	color: #009ACD;
+}
+*/
+.title:visited, .title:active {
+	color: #000;
+}
+
+.viewPanel {
+	text-align: center;
+	margin-right:auto;
+	margin-left: auto;
+}

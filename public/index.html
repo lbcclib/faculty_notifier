@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<link href="newbooks.json" type="application/json" rel="exhibit/data" />
+		<link href="bookNotif.css" type="text/css" rel="stylesheet" />
+		<script src="http://api.simile-widgets.org/exhibit/3.0.0rc1/exhibit-api.js"></script>
+
+	</head>
+	<body>
+		<div ex:role="viewPanel"  class="viewPanel">
+			<div ex:role="lens">
+				<!--
+				<a ex:href-content=".uri">
+					<img ex:src-content=".cover-image" class="cover" />
+				</a>
+			-->
+				<div class="metadata">
+					<a ex:href-content=".uri">
+						<img ex:src-content=".cover-image" class="cover" />
+					</a>
+					<div class="hide">
+						<a ex:href-content=".uri" ex:content=".label" class="hide"></a><br />
+				  </div>
+					<br />
+					<div class="hideUri">
+              <span class="dont-break-out">Author: <span ex:content=".author"></span></span><br />
+					</div>
+					<hr />
+              <span class="element">Shelving location: <span ex:content=".shelving-location"></span></span><br />
+              <span class="element">Call number: <span ex:content=".call-number"></span></span>
+				</div>
+			</div>
+		</div>
+ 	</body>
+ </html>
