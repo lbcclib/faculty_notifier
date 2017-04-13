@@ -20,7 +20,7 @@ class Book:
 		self.title = raw_book_data.find(ATOM + 'title').text.encode('utf-8').strip(' /')
 		author = raw_book_data.find(ATOM + 'author')
 		if author is not None:
-			self.author = author.find(ATOM + 'name').text
+			self.author = re.sub(r'([-\.]\(OrAlC\)[0-9]*)', '', author.find(ATOM + 'name').text)                        
 		links = raw_book_data.findall(ATOM + 'link')
 		for link in links:
 			if 'opac' == link.get('rel'):
