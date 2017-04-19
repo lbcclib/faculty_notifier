@@ -14,7 +14,7 @@ HOLDINGS = "{%s}" % HOLDINGS_NAMESPACE
 BOOK_VOLUME_XPATH = HOLDINGS + 'holdings/' + HOLDINGS + 'volumes/' + HOLDINGS + 'volume'
 VOLUME_COPY_XPATH = HOLDINGS + 'copies/' + HOLDINGS + 'copy'
 BOOK_COPY_XPATH = BOOK_VOLUME_XPATH + '/' + VOLUME_COPY_XPATH
-
+# The following class finds the tite of the book, the author's name, the link to the book, the date that it was added, ISBN, call- number, cover-image, and it's location
 class Book:
 	def __init__(self, raw_book_data):
 		self.title = raw_book_data.find(ATOM + 'title').text.encode('utf-8').strip(' /')
@@ -65,5 +65,4 @@ class Book:
     		if 'Content-Type' in headers: # if the connect type is in the header
         		if config['cover_image_mime_type'] == headers['Content-Type']: # makes sure that it's a jpge and not a strange format
 		    		return True 
-
 
