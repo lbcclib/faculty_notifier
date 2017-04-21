@@ -52,7 +52,7 @@ departments.append(Department('Visual arts department', 'alberto.martinezsanchez
 departments.append(Department('Water, Environment and technology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^TD7(4[1-9]|[5-7][0-9]|80)(\.|\s).*'))
 departments.append(Department('Welding department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^T(S21[5-9]|S22[0-8]|T211)(\.|\s).*'))
 
-feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&copyLocation=' + str(config['shelving_location']) # the feed element 
+feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&status=1&status=6&status=7&copyLocation=' + str(config['shelving_location']) # the feed element 
 original = et.parse(feed_url) # the et.parse is the library beinged used to get the data from the url and then it puts the data inot memory and pases it in xml
 books = original.findall(ATOM + 'entry') # goes through the xml file that we have in memory and finds everything that is an entry and all the entries are books
 
