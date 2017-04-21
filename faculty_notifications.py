@@ -12,7 +12,7 @@ config.update(yaml.safe_load(open('conf/output.yml')))
 departments = []
 # Regular expressions are being used to match the call number of the books to it's department
 departments.append(Department('Agriculture/Horticulture department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HD140[1-9]|HD14[1-9][0-9]|HD1[5-9][0-9]{2}|HD2[01][0-9]{2}|HD220[0-9]|HD2210|S[0-9]+|SB[0-9]+|TJ148[0-9]|TJ149[0-6]|QK[0-9]+).*'))
-departments.append(Department('Biology department', 'alberto.martnz@gmail.com', r'^(GE[0-9]|QH[0-9]|QK[0-9]|QL[0-9]|QM[0-9]|QP[0-9]|QR[0-9]|TP248\.1[3-9]|TP248\.[2-5]|TP248\.6[0-5]).*'))
+departments.append(Department('Biology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(GE[0-9]|QH[0-9]|QK[0-9]|QL[0-9]|QM[0-9]|QP[0-9]|QR[0-9]|TP248\.1[3-9]|TP248\.[2-5]|TP248\.6[0-5]).*'))
 departments.append(Department('Business department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HB[0-9]|HC[0-9]|HD[0-9]|HE[0-9]|HF[0-9]|HG[0-9]|HJ[0-9]).*'))
 departments.append(Department('Center for Accessibility Resources', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HV155[3-9]|HV15[6-9][0-9]|HV1[6-9][0-9]{2}|HV2[0-9]{3}|HV300[0-4]|KF480|LC481[2-9]|LC48[2-9][0-9]|LC49[01][0-9]|LC492[0-8]|NA2547|RA440|RC553.A88|RC569\.[7-9]|RC57[0-4]).*'))
 departments.append(Department('Chemistry department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^QD.*'))
@@ -20,7 +20,7 @@ departments.append(Department('Communication department', 'alberto.martinezsanch
 departments.append(Department('Computer Science department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HD69\.P75|HF5548\.[45]|QA75\.[5-9][0-9]*|QA76\.[0-8][0-9]*|QA76\.9[0-5][0-9]*|T56\.*)(\.|\s).*'))
 departments.append(Department('Counseling department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(BF636|LB2343)(\.|\s).*'))
 departments.append(Department('Culinary arts department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^TX(537|63[1-9]|6[4-9][0-9]|[78][0-9]{2}|9[0-4][0-9]|95[0-3])(\.|\s).*'))
-departments.append(Department('Criminal justice department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HV[678][0-9]{3}|HV9[0-8][0-9]{2}|HV99[01][0-9]|HV9920|KF9[67][0-9]{2}|KF98[01][0-9]|KF982[0-7]).*'))
+departments.append(Department('Criminal justice department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HV[678][0-9]{3}|HV9[0-8][0-9]{2}|HV99[01][0-9]|HV99[25]0|KF9[67][0-9]{2}|KF98[01][0-9]|KF982[0-7]).*'))
 departments.append(Department('Dental assistant department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^RK.*'))
 departments.append(Department('Developmental studies department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^LB2331\.2.*'))
 departments.append(Department('Diagnostic imaging department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^RC78\.7.*'))
