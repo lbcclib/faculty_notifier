@@ -74,4 +74,3 @@ for department in departments:
 exhibit_data = {'items': books_for_json} #putting in a format that exhibit js can read
 with open(config['json_output_path'], 'w') as json_file:
 	json_file.write(json.dumps(exhibit_data))
-B
