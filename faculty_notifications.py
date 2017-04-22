@@ -44,7 +44,7 @@ departments.append(Department('Physics department', 'alberto.martinezsanchez.640
 departments.append(Department('Psychology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(BF[0-9]+|R726\.[5-8]|RC32[1-9]|RC3[3-9][0-9]|RC4[0-9]{2}|RC5[0-6][0-9]|RC57[01])(\.|\s).*'))
 departments.append(Department('Religion department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(B[LMPQRSTVX]|KB)[0-9]+(\.|\s).*'))
 departments.append(Department('Small Business Development Center', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HD67\.2|HD2340\.[89]|HD234[0-5]|HD2346\.[0-5]|HF5679).*'))
-departments.append(Department('Sociology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(E184|H[MNQSTV][0-9]+).*'))
+departments.append(Department('Sociology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'E184|H[NQSTV][0-9]+|HM[1-9]|HM[1-9][0-9]|HM[1-9][0-9]{2})(\.|\s).*'))
 departments.append(Department('Spanish department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(PC407[3-9]|PC4[1-8][0-9]{2}|PC49[0-6][0-9]|PC497[01]|PQ603[7-9]|PQ60[4-9][0-9]|PQ6[1-7][0-9]{2}|PQ8[0-4][0-9]{2}|PQ85[01][0-9]).*'))
 departments.append(Department('Theater department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(PN15[3-9][0-9]|PN1[6-9][0-9]{2}|PN[23][0-9]{3}|PN4[0-2][0-9]{2}|PN43[0-4][0-9]|PN435[0-5]).*'))
 departments.append(Department('VICE council', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(BF575\.P9|E184\.A1|E185\.6|GN345\.6|GN469|GN495\.8|HF5549\.5\.A34|HF5549\.5\.M5|HM146|HT150[1-9]|HT151[0-9]|HT152[01]|K3242|LC19[1-9]|LC20[0-9]|LC21[0-3]|LC214\.[0-4]|LC214\.5[0-3]|LC1099|LC1[1-9][0-9]{2}|LC[234][0-9]{3}|LC50[0-9]{2}|LC51[0-5][0-9])(\.|\s).*'))
