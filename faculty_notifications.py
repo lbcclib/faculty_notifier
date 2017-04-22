@@ -25,7 +25,7 @@ departments.append(Department('Dental assistant department', 'alberto.martinezsa
 departments.append(Department('Developmental studies department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^LB2331\.2.*'))
 departments.append(Department('Diagnostic imaging department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^RC78\.7.*'))
 departments.append(Department('Drafting and engineering graphics department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(T35[1-9]|T36[0-9]|T37[01]|TA174)(\.|\s).*'))
-departments.append(Department('Education and HDFS department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(GN480|GT24[6-8][0-9]|GT2490|HV699|HV[7-9][0-9]{2}|HV1[0-3][0-9]{2}|14[0-4][0-9]|HQ75\.27|HQ75\.53|HQ77[789]|HQ78[01]|HQ79[3-9]|L[ABC]?[0-9]+)(\.|\s).*'))
+departments.append(Department('Education and HDFS department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(GN480|GT24[6-8][0-9]|GT2490|HV699|HV[7-9][0-9]{2}|HV1[0-3][0-9]{2}|14[0-4][0-9]|HQ75\.27|HQ75\.53|HQ77[789]|HQ78[01]|HQ79[3-9]|HQ5[0-9]{2}|L[ABC]?[0-9]+)(\.|\s).*'))
 departments.append(Department('ELA department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(LB1572|LB1576|P11[89]|P12[01]|PE110[89]|PE111[0-4]|PE1128\.A2|PE113[1-9]|PE1404)(\.|\s).*'))
 departments.append(Department('Engineering department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(T[AJK][0-9]+|TP15[56])(\.|\s).*'))
 departments.append(Department('English/Writing department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(LB2360|PE140[2-9]|PE14[1-8][0-9]|PE149[0-7]|PN335[5-9]|PN33[67][0-9]|PN338[0-5]|T11|T11\.[0-5])(\.|\s).*'))
