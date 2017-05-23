@@ -1,4 +1,4 @@
-import re, urllib, yaml
+Aimport re, urllib, yaml
 import lxml.etree as et
 
 # Load configuration
@@ -14,18 +14,25 @@ HOLDINGS = "{%s}" % HOLDINGS_NAMESPACE
 BOOK_VOLUME_XPATH = HOLDINGS + 'holdings/' + HOLDINGS + 'volumes/' + HOLDINGS + 'volume'
 VOLUME_COPY_XPATH = HOLDINGS + 'copies/' + HOLDINGS + 'copy'
 BOOK_COPY_XPATH = BOOK_VOLUME_XPATH + '/' + VOLUME_COPY_XPATH
-
+# The following class finds the tite of the book, the author's name, the link to the book, the date that it was added, ISBN, call- number, cover-image, and it's location
 class Book:
 	def __init__(self, raw_book_data):
 		self.title = raw_book_data.find(ATOM + 'title').text.encode('utf-8').strip(' /')
 		author = raw_book_data.find(ATOM + 'author')
 		if author is not None:
-			self.author = author.find(ATOM + 'name').text
+			self.author = re.sub(r'([-\.]\(OrAlC\)[0-9]*)', '', author.find(ATOM + 'name').text)
+                        
 		links = raw_book_data.findall(ATOM + 'link')
 		for link in links:
 			if 'opac' == link.get('rel'):
 				self.uri = link.get('href')
 				break
+
+                categories = raw_book_data.findall(ATOM + 'category')
+                for category in categories:
+                        if 'Spanish Language.' == category.get('term'):
+                                self.spanish = category.get('term')
+                                break
 
 		date_cat = raw_book_data.find(ATOM + 'updated')
 		if date_cat is not None:
@@ -64,6 +71,4 @@ class Book:
     		headers = response.info() #we look at the headers that were sent back
     		if 'Content-Type' in headers: # if the connect type is in the header
         		if config['cover_image_mime_type'] == headers['Content-Type']: # makes sure that it's a jpge and not a strange format
-		    		return True 
-
-
+		    		return True
