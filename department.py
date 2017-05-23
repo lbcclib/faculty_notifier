@@ -45,9 +45,8 @@ class Department:
 				images_attached = images_attached + 1 # increase the first loop by one and continue until you reach 8
 			book_number = book_number + 1 # if the default cover image is the same as the first URL image then increase the loop by one and conitneu the loop
 
-		html = html + '<p>A more complete listing is available at this <a href="'
-		html = html + (config['link'])+'">link</a>'
-		html = html + '. Please <a href="mailto:hawkinr@linnbenton.edu">contact Richenda Hawkins at hawkinr@linnbenton.edu</a> if you would like us to purchase other materials for our collection.<p>'
+		html = html + '<p>A more complete listing is available at http://notifications.lbcc.linnlibraries.org. Please contact <a href="mailto:hawkinr@linnbenton.edu">Richenda Hawkins</a>'
+		html = html + ' if you would like us to purchase other materials for our collection.<p>'
 		html = html +   '<br><br>Thanks,<br><br><br>LBCC Library'
 		html = html + '</body></html>'
 		#print(html)
