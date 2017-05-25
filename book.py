@@ -1,4 +1,4 @@
-import re, urllib, yaml
+Aimport re, urllib, yaml
 import lxml.etree as et
 
 # Load configuration
@@ -20,12 +20,18 @@ class Book:
 		self.title = raw_book_data.find(ATOM + 'title').text.encode('utf-8').strip(' /')
 		author = raw_book_data.find(ATOM + 'author')
 		if author is not None:
-			self.author = re.sub(r'([-\.]\(OrAlC\)[0-9]*)', '', author.find(ATOM + 'name').text)                        
+			self.author = re.sub(r'([-\.]\(OrAlC\)[0-9]*)', '', author.find(ATOM + 'name').text)
 		links = raw_book_data.findall(ATOM + 'link')
 		for link in links:
 			if 'opac' == link.get('rel'):
 				self.uri = link.get('href')
 				break
+
+                categories = raw_book_data.findall(ATOM + 'category')
+                for category in categories:
+                        if 'Spanish Language.' == category.get('term'):
+                                self.spanish = category.get('term')
+                                break
 
 		date_cat = raw_book_data.find(ATOM + 'updated')
 		if date_cat is not None:
