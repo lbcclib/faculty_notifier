@@ -15,19 +15,11 @@ class Department:
 		self.call_number_match = call_number_match
 		self.books_of_interest = []
         # The regular expression is looking for relevant books to it's department by matching the book to it's department
-	def is_interested_in(self, call_number):
-		if re.match(self.call_number_match, call_number) is not None:
+	def is_interested_in(self, book):
+		if re.match(self.call_number_match, book.call_number) is not None:
 			return True
 		else:
 			return False
-
-# create a new method outside of Department class with spansih dep category
-                
-        def spanish_language(self, call_number):
-                if re.match(self.categories, category) is not None:
-                        return True
-                else:
-                        return False
 
         # Attach books to the department object
 	def mark_book_for_email(self, book):
@@ -39,13 +31,18 @@ class Department:
 			return True
 		else:
 			return False
+
+	def salutation(self):
+		return "Dear colleagues in the " + self.name
+
+
         # The following function sends the emails to the right departments with the right content 
 	def send_email(self):
 		msg = MIMEMultipart('alternative')
 		msg['Subject'] = "New books at the LBCC Library"
 		msg['From'] = config['email_sender']
 		msg['To'] = self.email
-		html = '<html><head></head> <body><p>Dear colleagues in the ' + self.name + ',</p>'
+		html = '<html><head></head> <body><p>' + self.salutation() + ',</p>'
 		html = html + '<p>We\'ve recently added some books/materials to our collection that we think you might be interested in:</p>'
 		images_attached = 0
 		book_number = 0
@@ -68,3 +65,18 @@ class Department:
 		mail.login(config['email_sender'], config['email_password'])
 		mail.sendmail(config['email_sender'], self.email, msg.as_string())
 		mail.quit()
+
+class SpanishInterestGroup(Department):
+	# Simpler init, becaues we don't need a call_number_match or name
+	def __init__(self, email):
+		self.email = email
+		self.books_of_interest = []
+
+	def is_interested_in(self, book):
+		if hasattr('book', 'language'):
+			if 'Spanish' == book.language:
+				return True
+		return False
+
+	def salutation(self):
+		return "Dear colleagues who enjoy reading in Spanish"

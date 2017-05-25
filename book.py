@@ -1,4 +1,4 @@
-Aimport re, urllib, yaml
+import re, urllib, yaml
 import lxml.etree as et
 
 # Load configuration
@@ -29,8 +29,8 @@ class Book:
 
                 categories = raw_book_data.findall(ATOM + 'category')
                 for category in categories:
-                        if 'Spanish Language.' == category.get('term'):
-                                self.spanish = category.get('term')
+                        if 'Spanish Language' in category.get('term'):
+                                self.language = "Spanish"
                                 break
 
 		date_cat = raw_book_data.find(ATOM + 'updated')
