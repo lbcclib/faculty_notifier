@@ -66,7 +66,7 @@ class Department:
 		mail.ehlo()
 		mail.starttls()
 		mail.login(config['email_sender'], config['email_password'])
-		mail.sendmail(config['email_sender'], self.email, msg.as_string())
+		mail.sendmail(config['email_sender'], self.email.split(','), msg.as_string())
 		mail.quit()
 
 class SpanishInterestGroup(Department):
