@@ -30,7 +30,7 @@ class Book:
                 categories = raw_book_data.findall(ATOM + 'category')
                 for category in categories:
                         if 'Spanish' in category.get('term') and 'anguage' in category.get('term'):
-                                self.language = "Spanish"
+                                self.language = "es"
                                 break
 
 		date_cat = raw_book_data.find(ATOM + 'updated')
