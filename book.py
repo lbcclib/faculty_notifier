@@ -29,7 +29,7 @@ class Book:
 
                 categories = raw_book_data.findall(ATOM + 'category')
                 for category in categories:
-                        if 'Spanish Language' in category.get('term'):
+                        if 'Spanish' in category.get('term') and 'anguage' in category.get('term'):
                                 self.language = "Spanish"
                                 break
 
