@@ -20,9 +20,19 @@ class Department:
 			return True
 		else:
 			return False
-        # The book's are being attached to the email 
+
+# create a new method outside of Department class with spansih dep category
+                
+        def spanish_language(self, call_number):
+                if re.match(self.categories, category) is not None:
+                        return True
+                else:
+                        return False
+
+        # Attach books to the department object
 	def mark_book_for_email(self, book):
 		self.books_of_interest.append(book)
+
         # The fallowing object makes sure there is enough data or content in the email message
 	def has_enough_data_for_email(self):
 		if config['min_items_per_email'] <= len(self.books_of_interest):
