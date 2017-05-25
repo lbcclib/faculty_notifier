@@ -1,2 +1,2 @@
-json_output_path: public/newbooks.json
+json_output_path: /home/sandbej/notifications.lbcc.linnlibraries.org/newbooks.json
 log_path: notifications.log
