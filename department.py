@@ -1,4 +1,4 @@
-import re, smtplib, yaml
+import datetime, re, smtplib, yaml
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -51,7 +51,7 @@ class Department:
 			while ((images_attached < config['max_items_per_email']) and (book_number < len(self.books_of_interest))):
 				if hasattr(self.books_of_interest[book_number], 'cover_image_url'):
 					html = html + self.books_of_interest[book_number].to_html()
-					log_file.write(self.books_of_interest[book_number].title + " emailed to " + self.name + "\n")
+					log_file.write(str(datetime.datetime.now()) + ': ' + self.books_of_interest[book_number].title + " emailed to " + self.name + "\n")
 					images_attached = images_attached + 1 # increase the first loop by one and continue until you reach 8
 				book_number = book_number + 1 # if the default cover image is the same as the first URL image then increase the loop by one and conitneu the loop
 
