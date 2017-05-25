@@ -17,7 +17,7 @@ departments.append(Department('Business department', 'alberto.martinezsanchez.64
 departments.append(Department('Center for Accessibility Resources', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HV155[3-9]|HV15[6-9][0-9]|HV1[6-9][0-9]{2}|HV2[0-9]{3}|HV300[0-4]|KF480|LC481[2-9]|LC48[2-9][0-9]|LC49[01][0-9]|LC492[0-8]|NA2547|RA440|RC553.A88|RC569\.[7-9]|RC57[0-4]).*'))
 departments.append(Department('Chemistry department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(Q[1-9]|Q[1-9][0-9]|Q[12][0-9][0-9]|QD|TX545)([0-9]|\.|\s).*'))
 departments.append(Department('Communication department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(GN345\.6|HM258|P8[7-9]|P9[0-6]|PN4[0-2][0-9]{2}|PN43[01][0-9]|PN432[01])(\.|\s).*'))
-departments.append(Department('Computer Science department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HD69\.P75|HF5548\.[45]|QA75\.[5-9][0-9]*|QA76\.[0-8][0-9]*|QA76\.9[0-5][0-9]*|T56\.*)(\.|\s).*'))
+departments.append(Department('Computer Science department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HD69\.P75|HF5548\.[45]|QA75\.[5-9][0-9]*|QA76\.[0-8][0-9]*|QA76\.9[0-5][0-9]*|T56\..*|TK5105\.888[0-9]*)(\.|\s).*'))
 departments.append(Department('Counseling department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(BF636|LB2343)(\.|\s).*'))
 departments.append(Department('Culinary arts department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^TX(537|63[1-9]|6[4-9][0-9]|[78][0-9]{2}|9[0-4][0-9]|95[0-3])(\.|\s).*'))
 departments.append(Department('Criminal justice department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(HV[678][0-9]{3}|HV9[0-8][0-9]{2}|HV99[01][0-9]|HV99[25]0|KF9[67][0-9]{2}|KF98[01][0-9]|KF982[0-7]).*'))
@@ -50,6 +50,7 @@ departments.append(Department('Theater department', 'alberto.martinezsanchez.640
 departments.append(Department('VICE council', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(BF575\.P9|E184\.A1|E185\.6|GN345\.6|GN469|GN495\.8|HF5549\.5\.A34|HF5549\.5\.M5|HM146|HT150[1-9]|HT151[0-9]|HT152[01]|K3242|LC19[1-9]|LC20[0-9]|LC21[0-3]|LC214\.[0-4]|LC214\.5[0-3]|LC1099|LC1[1-9][0-9]{2}|LC[234][0-9]{3}|LC50[0-9]{2}|LC51[0-5][0-9])(\.|\s).*'))
 departments.append(Department('Visual arts department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^(N[0-9]|NA|NB|NC|ND|NE|NK|NX|TR).*'))
 departments.append(Department('Water, Environment and technology department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^TD7(4[1-9]|[5-7][0-9]|80)(\.|\s).*'))
+departments.append(Department('Web team', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'(QA76\.76\s?\.H94|QA76\.73\s?\.J39|QA76\.73\s?\.P224|QA76\.73\s?\.R83|QA76\.73\s?\.S67|TK5105\.888).*'))
 departments.append(Department('Welding department', 'alberto.martinezsanchez.6407@mail.linnbenton.edu', r'^T(S21[5-9]|S22[0-8]|T211)(\.|\s).*'))
 
 feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&status=1&status=6&status=7&copyLocation=' + str(config['shelving_location']) # the feed element 
