@@ -16,8 +16,9 @@ pip install email lxml pyyaml
 ## Configuring this software for your unique institution
 
 1. Correctly configure all the YAML files in the `conf` directory
-2. Add the correct email addresses to `faculty_notifications.py`.  Your institution almost certainly has different departments and interests than ours does, so you will also probably have to modify existing or create new regular expressions.
-3. You may wish to send books to certain folks based on some characteristic other than call number ranges.  To do this:
+2. Add the correct email addresses to `faculty_notifications.py`. If multiple people will receive one notification, separate their email addresses with a comma (e.g. `"biology.faculty@example.edu,microbiology.faculty@example.edu"`)
+3. Your institution almost certainly has different departments and interests than ours does, so you will also probably have to modify existing or create new regular expressions.
+4. You may wish to send books to certain folks based on some characteristic other than call number ranges.  To do this:
     1. Add some code to the `__init__` method in the `Book` class to make sure that all Book objects contain enough data to identify them.  
     2. Using the `SpanishInterestGroup` class as an example, add an inherited class to `department.py`.
     3. Add the name of your new inherited class to the appropriate `import` statement in `faculty_notifications.py`
