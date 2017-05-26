@@ -1,0 +1,7 @@
+min_items_per_email: 1
+max_items_per_email: 8
+email_sender: library@example.edu
+email_password: cool_password_here
+smtp_server: smtp.gmail.com
+smtp_port: 587
+link: http://notifications.lbcc.linnlibraries.org
