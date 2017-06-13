@@ -48,7 +48,7 @@ departments.append(Department('Philosophy department', 'sandbej@linnbenton.edu',
 departments.append(Department('Physics department', 'sandbej@linnbenton.edu', r'^Q[BC][0-9]+.*')) 
 departments.append(Department('Psychology department', 'sandbej@linnbenton.edu', r'^(BF[0-9]+|R726\.[5-8]|RC32[1-9]|RC3[3-9][0-9]|RC4[0-9]{2}|RC5[0-6][0-9]|RC57[01])(\.|\s).*'))
 departments.append(Department('Public Safety Office', 'sandbej@linnbenton.edu', r'^(QE53[1-9]|QE54[01])(\.|\s).*'))
-departments.append(Department('Religion department', 'sandbej@linnbenton.edu', r'^(B[LMPQRSTVX][0-9]+|DS14[0-9]|KB[0-9]+)(\.|\s).*'))
+departments.append(Department('Religion department', 'sandbej@linnbenton.edu', r'^(B[LMPQRSTVX][0-9]+|DS1[0-4][0-9]|KB[0-9]+)(\.|\s).*'))
 departments.append(Department('Small Business Development Center', 'sandbej@linnbenton.edu', r'^(HD67\.2|HD2340\.[89]|HD234[0-5]|HD2346\.[0-5]|HF5679).*'))
 departments.append(Department('Sociology department', 'sandbej@linnbenton.edu', r'^(E184|H[MNQSTV][0-9]+).*'))
 departments.append(Department('Spanish department', 'sandbej@linnbenton.edu', r'^(PC407[3-9]|PC4[1-8][0-9]{2}|PC49[0-6][0-9]|PC497[01]|PQ603[7-9]|PQ60[4-9][0-9]|PQ6[1-7][0-9]{2}|PQ8[0-4][0-9]{2}|PQ85[01][0-9]).*'))
