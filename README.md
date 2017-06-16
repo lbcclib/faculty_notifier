@@ -24,6 +24,11 @@ pip install email lxml pyyaml
     3. Add the name of your new inherited class to the appropriate `import` statement in `faculty_notifications.py`
     4. Also in `faculty_notifications.py`, append an object of your new class to the `departments` list.
 
+## Running this software
+
+1. `cd` to the directory that contains `faculty_notifications.py`
+2. Run `python faculty_notifications.py`
+
 ## Contributing to this software
 
 1. Sign in to GitHub.
