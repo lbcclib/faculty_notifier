@@ -16,6 +16,11 @@ pip install email lxml pyyaml
 ## Configuring this software for your unique institution
 
 1. Correctly configure all the YAML files in the `conf` directory
+    - `cover_images.yml` will probably need no changes
+    - `email.yml` is set up to be friendly to gmail addresses.  It might take some development to support cases in which a user's SMTP username is different than the user's email address
+    - `email.yml` also includes a setting called `link`.  This will provide a link in the email to an HTML document in your public directory.  Change it to whatever URL will take folks to your `public` directory.
+    - `evergreen.yml` is an important file to change.  `num_items_to_fetch` will depend on how often you add new items to your system, and how often you plan to send out emails (it's best not to have too much repitition, but you also don't want to miss out on items that might be of interest to folks).  `shelving_location` should be the shelving location the database ID of the shelving location your patrons are interested in (e.g. Adult Nonfiction might be represented by the number 143). `opac_host` must be a valid hostname from somewhere in your consortium.  And the `org_unit` is your org unit's shortname (e.g. ABCLIB).
+    - `output.yml` includes a setting called `json_output_path`.  This path needs to be somewhere within your `public` directory.  By default, the HTML file looks for a JSON file in the same folder with the name `newbooks.json`, so the easiest configuration is to set this value to `/path/to/public/directory/newbooks.json`.
 2. Add the correct email addresses to `faculty_notifications.py`. If multiple people will receive one notification, separate their email addresses with a comma (e.g. `"biology.faculty@example.edu,microbiology.faculty@example.edu"`)
 3. Your institution almost certainly has different departments and interests than ours does, so you will also probably have to modify existing or create new regular expressions.
 4. You may wish to send books to certain folks based on some characteristic other than call number ranges.  To do this:
