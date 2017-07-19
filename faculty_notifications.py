@@ -60,7 +60,16 @@ departments.append(Department('Water, Environment and technology department', 's
 departments.append(Department('Web team', 'sandbej@linnbenton.edu', r'(QA76\.76\s?\.H94|QA76\.73\s?\.J39|QA76\.73\s?\.P224|QA76\.73\s?\.R83|QA76\.73\s?\.S67|TK5105\.888).*'))
 departments.append(Department('Welding department', 'sandbej@linnbenton.edu', r'^T(S21[5-9]|S22[0-8]|T211)(\.|\s).*'))
 
-feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&status=1&status=6&status=7&copyLocation=' + str(config['shelving_location']) # the URL that will return all the data we need
+
+if 'shelving_location' in config:
+	if isinstance(config['shelving_location'], list):
+		loc_string = '&copyLocation='.join(str(location) for location in config['shelving_location'])
+	else:
+		loc_string = str(config['shelving_location'])
+	feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&status=1&status=6&status=7&copyLocation=' + loc_string # the URL that will return all the data we need
+else:
+	feed_url = 'http://' + config['opac_host'] + '/opac/extras/browse/atom-full/item-age/' + config['org_unit'] + '/1/' + str(config['num_items_to_fetch']) + '?status=0&status=1&status=6&status=7'
+
 original = et.parse(feed_url) # parse the data from that URL
 books = original.findall(ATOM + 'entry') # goes through the xml file that we have in memory and finds everything that is an entry and all the entries are books
 
