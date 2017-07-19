@@ -36,11 +36,19 @@ class Department:
 	def salutation(self):
 		return "Dear colleagues in the " + self.name
 
+	def subject(self):
+		return "New books at the LBCC Library"
+
+	def closing_words(self):
+		html = '<p>A more complete listing is available at ' + config['link'] + '. Please contact <a href="mailto:hawkinr@linnbenton.edu">Richenda Hawkins</a>'
+		html = html + ' if you would like us to purchase other materials for our collection.</p>'
+		html = html +   '<br><br>Thanks,<br><br><br>LBCC Library'
+		return html
 
         # The following function sends the emails to the right departments with the right content 
 	def send_email(self):
 		msg = MIMEMultipart('alternative')
-		msg['Subject'] = "New books at the LBCC Library"
+		msg['Subject'] = self.subject()
 		msg['From'] = config['email_sender']
 		msg['To'] = self.email
 		html = '<html><head></head> <body><p>' + self.salutation() + ',</p>'
@@ -55,9 +63,7 @@ class Department:
 					images_attached = images_attached + 1 # increase the first loop by one and continue until you reach 8
 				book_number = book_number + 1 # if the default cover image is the same as the first URL image then increase the loop by one and conitneu the loop
 
-		html = html + '<p>A more complete listing is available at http://notifications.lbcc.linnlibraries.org. Please contact <a href="mailto:hawkinr@linnbenton.edu">Richenda Hawkins</a>'
-		html = html + ' if you would like us to purchase other materials for our collection.<p>'
-		html = html +   '<br><br>Thanks,<br><br><br>LBCC Library'
+		html = html + self.closing_words()
 		html = html + '</body></html>'
 		#print(html)
 		part2 = MIMEText(html, 'html')
@@ -84,3 +90,24 @@ class SpanishInterestGroup(Department):
 
 	def salutation(self):
 		return "Dear colleagues who enjoy reading in Spanish"
+
+class NotifyAboutEverything(Department):
+	def __init__(self, email):
+		self.email = email
+		self.name = "Spanish Interest Group"
+		self.books_of_interest = []
+
+	def is_interested_in(self, book):
+		return True
+
+	def salutation(self):
+		return "Dear Burlington Public Library enthusiast" 
+
+	def subject(self):
+		return "New books at the Burlington Public Library"
+
+	def closing_words(self):
+            html = '<p>A more complete listing is available at ' + config['link'] + '. Please use <a href="http://www.burlingtonwa.gov/FormCenter/Library-8/Suggest-a-Title-55">this form</a> '
+            html = html + 'to suggest other titles</p>'
+            html = html + '<br><br>Thanks,<br><br><br>Burlington Public Library'
+            return html

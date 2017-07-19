@@ -1,7 +1,7 @@
 import lxml.etree as et
 import json, os, re, smtplib, urllib, yaml
 from book import Book
-from department import Department, SpanishInterestGroup
+from department import Department, NotifyAboutEverything, SpanishInterestGroup
 
 ATOM_NAMESPACE = 'http://www.w3.org/2005/Atom' # The feed element
 ATOM = "{%s}" % ATOM_NAMESPACE # replaces the % and the s and replaces it follwed by anything after % 
@@ -13,6 +13,7 @@ departments = []
 # Regular expressions are being used to match the call number of the books to its department
 
 departments.append(SpanishInterestGroup('sandbej@linnbenton.edu'))
+departments.append(NotifyAboutEverything('sandbej@linnbenton.edu'))
 
 departments.append(Department('Agriculture/Horticulture department', 'sandbej@linnbenton.edu', r'^(HD140[1-9]|HD14[1-9][0-9]|HD1[5-9][0-9]{2}|HD2[01][0-9]{2}|HD220[0-9]|HD2210|S[0-9]+|SB[0-9]+|TJ148[0-9]|TJ149[0-6]|QK[0-9]+).*'))
 departments.append(Department('Biology department', 'sandbej@linnbenton.edu', r'^(GE[0-9]|QH[0-9]|QK[0-9]|QL[0-9]|QM[0-9]|QP[0-9]|QR[0-9]|TP248\.1[3-9]|TP248\.[2-5]|TP248\.6[0-5]).*'))
