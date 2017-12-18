@@ -66,9 +66,13 @@ class Book:
 
 	# Checks for cover images and if not available them
 	def is_cover_image_good(self, cover_image_url):
-    		response = urllib.urlopen(cover_image_url) #request cover image
-    		headers = response.info() #we look at the headers that were sent back
-    		if 'Content-Type' in headers: # if the connect type is in the header
-        		if config['cover_image_mime_type'] == headers['Content-Type']: # makes sure that it's a jpge and not a strange format
-		    		return True 
+		try:
+	    		response = urllib.urlopen(cover_image_url) #request cover image
+    			headers = response.info() #we look at the headers that were sent back
+    			if 'Content-Type' in headers: # if the connect type is in the header
+        			if config['cover_image_mime_type'] == headers['Content-Type']: # makes sure that it's a jpge and not a strange format
+		    			return True
+			return False
+		except IOError:
+			return False
 
