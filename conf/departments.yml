@@ -118,7 +118,7 @@ departments:
         - Nursing and CNA Department:
                 emails:
                         - test@example.com
-                regex: '^(GN484\.38|(Q[MP]|R[GST])[0-9]+).*'
+                regex: '^((GN484\.38)|(QM|R[GST])[0-9]+|QP([0-9]|[123][0-9]|4[01]|91|249|267|3[035][1-6]|32[1-9]|361|50[1-9]|51[0-8]|55[1-9]|5[6-9][0-9]|6[0-9]{2}|7[0-4][0-9]|75[0-2])(\.|\s)).*'
         - Occupational Therapy Assistant Department:
                 emails:
                         - test@example.com
