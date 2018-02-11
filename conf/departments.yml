@@ -91,6 +91,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(GV20[1-9]|GV2[1-9][0-9]|GV[3-9][0-9]{2}|GV10[0-9]{2}|GV11[0-8][0-9]|GV119[0-8]|RC12[0-3][0-9]|RC124[0-5])(\.|\s).*'
+        - Health Informatics Department:
+                emails:
+                        - test@example.com
+                regex: '^R85[89]|R86[0-4](\.|\s).*'
         - History Department:
                 emails:
                         - test@example.com
