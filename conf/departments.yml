@@ -115,6 +115,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(HA|QA[1-6]|QA7[0-5]|QA7[89]|QA[89]).*'
+        - Mechatronics:
+                regex: '^(TJ163\.12|TK7875).*'
+                emails:
+                        - test@example.com
         - Medical Assisting Department:
                 emails:
                         - test@example.com
