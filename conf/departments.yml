@@ -135,6 +135,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^Q[BC][0-9]+.*'
+        - Polysomnographic Technology Department:
+                emails:
+                        - test@example.com
+                regex: '^(BF(106[89]|107[0-3])|QP42[5-7]|RA78[56]|RC54[7-9]|RC737\.5)(\.|\s).*'
         - Psychology Department:
                 emails:
                         - test@example.com
