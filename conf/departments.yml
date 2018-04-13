@@ -171,6 +171,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(PC407[3-9]|PC4[1-8][0-9]{2}|PC49[0-6][0-9]|PC497[01]|PQ603[7-9]|PQ60[4-9][0-9]|PQ6[1-7][0-9]{2}|PQ8[0-4][0-9]{2}|PQ85[01][0-9]).*'
+        - Surgical Tech:
+                emails:
+                        - test@example.com
+                regex: '^RD.*'
         - Theater Department:
                 emails:
                         - test@example.com
