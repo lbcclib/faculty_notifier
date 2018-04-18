@@ -82,7 +82,7 @@ departments:
         - Film Studies Interest Group:
                 emails:
                         - test@example.com
-                regex: '^PN199[3-8].*'
+                regex: '^(PN199[3-8]|TR84[5-9]|TR8[5-9][0-9]|TR9[01][0-9]|TR92[0-3])(\.|\s).*'
         - Geology Department:
                 emails:
                         - test@example.com
