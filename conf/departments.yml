@@ -50,7 +50,7 @@ departments:
         - Dental Assistant Department:
                 emails:
                         - test@example.com
-                regex: '^RK.*'
+                regex: '^(RK[0-9]+|QM535)(\.|\s).*'
         - Developmental Studies Department:
                 emails:
                         - test@example.com
