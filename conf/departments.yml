@@ -127,6 +127,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(M|ML|MT)[0-9]+.*'
+        - Non-Destructive Testing Department:
+                emails:
+                        - test@example.com
+                regex: '^TA417\.[2-5].*'
         - Nursing and CNA Department:
                 emails:
                         - test@example.com
