@@ -178,7 +178,7 @@ departments:
         - Surgical Tech:
                 emails:
                         - test@example.com
-                regex: '^RD.*'
+                regex: '^(RD\n+|QM\n+|QR[1-9]|QR[1-6][0-9]|QR7[0-4]|R72[3-6])(\.|\s).*'
         - Theater Department:
                 emails:
                         - test@example.com
