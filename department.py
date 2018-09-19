@@ -91,6 +91,21 @@ class SpanishInterestGroup(Department):
 	def salutation(self):
 		return "Dear colleagues who enjoy reading in Spanish"
 
+class ChildrensLit(Department):
+	def __init__(self, email):
+		self.email = email
+		self.name = "Children's Literature enthusiasts"
+		self.books_of_interest = []
+
+	def is_interested_in(self, book):
+		if hasattr(book, 'shelving_location'):
+			if book.shelving_location in ["Children's chapter books", "Children's literature"]:
+				return True
+		return False
+
+	def salutation(self):
+		return "Dear colleagues interested in childrens' literature"
+
 class NotifyAboutEverything(Department):
 	def __init__(self, email):
 		self.email = email

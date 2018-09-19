@@ -1,7 +1,7 @@
 import lxml.etree as et
 import json, os, re, smtplib, urllib, yaml
 from book import Book
-from department import Department, NotifyAboutEverything, SpanishInterestGroup
+from department import Department, ChildrensLit, NotifyAboutEverything, SpanishInterestGroup
 
 ATOM_NAMESPACE = 'http://www.w3.org/2005/Atom' # The feed element
 ATOM = "{%s}" % ATOM_NAMESPACE # replaces the % and the s and replaces it follwed by anything after % 
@@ -19,6 +19,7 @@ for d in departments_config['departments']:
 # Add custom departments to the list
 departments.append(SpanishInterestGroup('test@example.com'))
 departments.append(NotifyAboutEverything('test@example.com'))
+departments.append(ChildrensLit('test@example.com'))
 
 if 'shelving_location' in config:
 	if isinstance(config['shelving_location'], list):
