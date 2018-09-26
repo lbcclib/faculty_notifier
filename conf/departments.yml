@@ -191,6 +191,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(N[0-9]|NA|NB|NC|ND|NE|NK|NX|TR).*'
+        - Visual Communication Program:
+                emails:
+                        - test@example.com
+                regex: '^(NC99[7-9]|NC100[0-3]|N7433\.8|NC915\.C65|NK15[2-4][0-9]|Z246|Z250)(\.|\s).*'
         - Water, Environment and Technology Department:
                 emails:
                         - test@example.com
