@@ -1,8 +1,20 @@
 departments:
+        - Accounting Department:
+                emails:
+                        - test@example.com
+                regex: '^HF(56[0-9]{2})(\.|\s).*'
         - Agriculture/Horticulture Department:
                 regex: '^(HD140[1-9]|HD14[1-9][0-9]|HD1[5-9][0-9]{2}|HD2[01][0-9]{2}|HD220[0-9]|HD2210|S[0-9]+|SB[0-9]+|TJ148[0-9]|TJ149[0-6]|QK[0-9]+).*'
                 emails:
                         - test@example.com
+        - Anthropology Department:
+                emails:
+                        - test@example.com
+                regex: '^(GN[0-9]+|E[5-9][0-9])(\.|\s).*'
+        - Automotive Technology Department:
+                emails:
+                        - test@example.com
+                regex: '^TL(\.|\s).*'
         - Aviation Science Department:
                 emails:
                         - test@example.com
@@ -79,6 +91,14 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^(LB2360|PE140[2-9]|PE14[1-8][0-9]|PE149[0-7]|PN1009\.5|PN10[345][0-9]|PN335[5-9]|PN33[67][0-9]|PN338[0-5]|T11|T11\.[0-5]|ZA3075)(\.|\s).*'
+        - Environmental Science Department:
+                emails:
+                        - test@example.com
+                regex: '^GE(\.|\s).*'
+        - Equine Science Department:
+                emails:
+                        - test@example.com
+                regex: '^SF3[0-9]{2}(\.|\s).*'
         - Film Studies Interest Group:
                 emails:
                         - test@example.com
@@ -95,6 +115,10 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^R85[89]|R86[0-4](\.|\s).*'
+        - Heavy Equipment/Diesel Department:
+                emails:
+                        - test@example.com
+                regex: '^TJ(\.|\s).*'
         - History Department:
                 emails:
                         - test@example.com
@@ -207,3 +231,7 @@ departments:
                 emails:
                         - test@example.com
                 regex: '^T(S21[5-9]|S22[0-8]|T211)(\.|\s).*'
+        - Women's Studies Department:
+                emails:
+                        - test@example.com
+                regex: '^HQ(11[1-9]|1[2-9][0-9]|[2-9][0-9]{2}|1[0-9]{3})(\.|\s).*'
