@@ -1,5 +1,7 @@
 # Faculty notifier
 
+We're no longer using this.  We're instead using the ruby version of this project, here: https://github.com/lbcclib/newbooks
+
 This set of python code reads in data from Evergreen ILS, creates a Web site featuring recently purchased books, and sends emails notifying folks on campus when books in their disciplines arrive.
 
 ## Installing Factulty notifier
